@@ -6,27 +6,7 @@ const newData = {
 (async () => {
   const { default: React } = await import('libs/react');
   const { default: ReactDOM } = await import('libs/react-dom');
-  const useLoadComponent = (importPromise) => {
-    const [content, setContent] = React.useState({ status: 'loading', value: 'loading...' });
-    React.useEffect(() => {
-      importPromise
-        .then(({ default: loadComponentPromise }) => {
-          return loadComponentPromise.then((Component) => {
-            setContent({
-              status: 'success',
-              value: Component,
-            });
-          });
-        })
-        .catch((err) => {
-          setContent({
-            status: 'error',
-            value: err,
-          });
-        });
-    }, []);
-    return content;
-  };
+  const { default: useLoadComponent } = await import('libs/useLoadComponent');
 
   function New() {
     const content = useLoadComponent(import('./components/Content'));
@@ -34,7 +14,7 @@ const newData = {
 
     return (
       <div>
-        <h1>Today's New</h1>
+        <h1>新闻详情</h1>
         {title.status === 'success' ? title.value({ value: newData.title }) : title.value}
         {content.status === 'success' ? content.value({ value: newData.content }) : content.value}
       </div>

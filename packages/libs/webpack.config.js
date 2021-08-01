@@ -16,6 +16,7 @@ module.exports = {
       exposes: {
         './react': './src/react.js',
         './react-dom': './src/react-dom.js',
+        './useLoadComponent': './src/useLoadComponent.js',
       },
     }),
   ],

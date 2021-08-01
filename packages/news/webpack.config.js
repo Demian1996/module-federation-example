@@ -28,14 +28,10 @@ module.exports = {
       filename: 'index.html',
     }),
     new ModuleFederationPlugin({
-      name: 'currentNew',
       filename: 'remoteEntry.js',
-      exposes: {
-        './Title': './src/components/Title/index.js',
-        './Content': './src/components/Content/index.js',
-      },
       remotes: {
         libs: 'libs@http://localhost:3000/remoteEntry.js',
+        currentNew: 'currentNew@http://localhost:3001/remoteEntry.js',
       },
     }),
   ],

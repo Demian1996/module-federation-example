@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build:new": "cd packages/new && npm run build",
+    "build:news": "cd packages/news && npm run build",
     "build:libs": "cd packages/libs && npm run build",
     "build": "concurrently \"npm:build:*\"",
     "server:new": "cd packages/new && npm run server",
+    "server:news": "cd packages/news && npm run server",
     "server:libs": "cd packages/libs && npm run server",
     "server": "concurrently \"npm:server:*\""
   },

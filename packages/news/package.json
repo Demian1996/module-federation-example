@@ -1,0 +1,14 @@
+{
+  "name": "news",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "webpack",
+    "server": "serve dist -p 3002"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
