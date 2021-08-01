@@ -3,9 +3,10 @@
 ## 简介
 
 packages 下三个应用
-libs：工具库， remote
-new：新闻详情页， host & remote
-news：新闻列表页， host
+
+- libs：工具库， remote
+- new：新闻详情页， host & remote
+- news：新闻列表页， host
 
 ## 运行
 
